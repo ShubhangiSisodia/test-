@@ -1,10 +1,4 @@
-import React from "react";
-
-export const fetchData = () => {
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "text/plain" },
-    body: ` <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
@@ -167,62 +161,34 @@ export const fetchData = () => {
           </tr>
 
 
-       
-          
-              <tr  align="center"  width="100%" style="background: rgba(74, 105, 255, 0.2);">
-                <td align="center" style="color:black;">
+    
+         
+          <tr  align="center"  width="100%" style="background: rgba(74, 105, 255, 0.2);">
+              <td align="center" style="color:black";>
+                
                 <div  style="color:black; display: flex; width: 100%; height: 11.5rem; align-items: center; justify-content: center; gap: 5rem;">
-                    <div style="text-align: center;">
-                      <h4 class="follow-us" style="color: var(--Navy-Blue, #293897); font-size: 0.75rem; font-weight: 400;">Follow us on</h4>
-                      <a href="https://www.linkedin.com/company/grouple/?originalSubdomain=in" target="_blank">
-                        <img src="https://grouple-public-bucket.s3.ap-south-1.amazonaws.com/LinkedinLogo.png" alt="" />
-                      </a>
-                      <a href="https://www.instagram.com/grouple_in/?hl=en" target="_blank">
-                        <img src="https://server.testgrouple.com/wp-content/theme/assets/images/assets/images/commom/instagram.png" alt="" />
-                      </a>
-                      <a href="https://twitter.com/Grouple_exp" target="_blank">
-                        <img src="https://server.testgrouple.com/wp-content/theme/assets/images/assets/images/commom/twitter.png" alt="" />
-                      </a>
-                    </div>
-                    <div class="contact-info" style="color:black; text-align: left;">
-                      <h4 class="contact" style="color: var(--Blue, #4a69ff); font-size: 0.75rem; font-weight: 400;">For questions, reach us at</h4>
-                      <p style="margin: 0;">help@grouple.in | +91 998**********</p>
-                    </div>
+                  <div>
+                    <h4 class="follow-us">Follow us on</h4>
+
+                    <a
+                    href="https://www.linkedin.com/company/grouple/?originalSubdomain=in" target="_blank" >
+                  <img src="https://grouple-public-bucket.s3.ap-south-1.amazonaws.com/LinkedinLogo.png"  alt=""/>
+                  </a>
+                    <a href="https://www.instagram.com/grouple_in/?hl=en" target="_blank">
+                      <img src="https://server.testgrouple.com/wp-content/theme/assets/images/assets/images/commom/instagram.png" alt="" />
+                    </a>
+                    <a href="https://twitter.com/Grouple_exp" target="_blank">
+                      <img src="https://server.testgrouple.com/wp-content/theme/assets/images/assets/images/commom/twitter.png" alt="" />
+                    </a>
+
                   </div>
-                </td>
-              </tr>
-        
+               
+                  <div class="contact-info" style="color:black";>
+                    <h4 class="contact">For questions, reach us at</h4>
+                    <h4>help@grouple.in | +91 998**********</h4>
+                  </div>
+                </div>
+              </td>
+            </tr>
       </body>
-    </html>  `,
-  };
-
-  return fetch("https://server.testgrouple.com/api/usr/testEmailTemplate", requestOptions)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok")
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error);
-    });
-};
-
-function App() {
-  // const [entity, setEntity] = useState(null);
-
-  const handleFetchClick = () => {
-    fetchData();
-  };
-
-  return (
-    <div>
-      <button onClick={handleFetchClick}>Fetch Data</button>
-    </div>
-  );
-}
-
-export default App;
+    </html> 
